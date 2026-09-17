@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Position</title>
+
+    <style>
+        .container {
+            background-color: skyblue;
+            height: 90vh;
+            padding: 50px;
+        }
+
+        .container-two {
+            background-color: lightcoral;
+            height: 90vh;
+            padding: 50px;
+        }
+
+        .item {
+            width: 30px;
+            height: 30px;
+            /* margin: 10px auto; */
+            border: 2px solid black;
+        }
+
+        .a {
+            background-color: pink;
+            /* position: static; default */
+        }
+        .b {
+            background-color: chocolate;
+        }
+
+        .c {
+            background-color: greenyellow;
+            /* position: relative; */
+            /* position: absolute; */
+            position: fixed;
+            /* position: sticky; */
+            left: 250px;
+            top: 2px;
+        }
+
+        .d {
+            background-color: brown;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item a"></div>
+        <div class="item b"></div>
+        <div class="item c"></div>
+        <div class="item d"></div>
+    </div>
+    <div class="container container-two">
+    </div>
+</body>
+</html>
