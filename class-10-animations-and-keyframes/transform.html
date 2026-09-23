@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>transform</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style>
+        .container {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .item {
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+            transition: transform 1s ease-out;
+            color: white;
+            font-size: 30px;
+            animation: moving-box 4s;
+            animation-timing-function: ease-out;
+            animation-iteration-count: infinite;
+        }
+
+        @keyframes moving-box {
+            0% {
+                background-color: black;
+                color: white;
+            }
+
+            25% {
+                background-color: aqua;
+            }
+
+            50% {
+                background-color: brown;
+            }
+
+            100% {
+                background-color: purple;
+                color: #000;
+            }
+        }
+
+        .item:hover {
+            cursor: pointer;
+        }
+
+        .x:hover {
+            transform: rotate(180deg);
+            background-color: red;
+
+        }
+
+        .y:hover {
+            transform: scale(0.5);
+            background-color: green;
+        }
+
+        .z:hover {
+            /* transform: translateX(-200px); */
+            transform: translateY(200px);
+            background-color: yellow;
+        }
+
+        .w:hover {
+            transform: skew(20deg, 20deg);
+            background-color: purple;
+        }
+
+        .w {
+            animation: move-left 5s;
+            animation-timing-function: ease-out;
+            animation-iteration-count: infinite;
+        }
+
+        @keyframes move-left {
+            0% {
+                transform: translateX(-100px);
+                
+            }
+
+            25% {
+                transform: translateX(-200px);
+            }
+
+            50% {
+                transform: translateX(-300px);
+            }
+
+            100% {
+                transform: translateX(-100vw);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item x">a</div>
+        <div class="item y">b</div>
+        <div class="item z">c</div>
+        <div class="item w">d</div>
+    </div>
+
+    <h1 class="bg-black inline">inline css</h1>
+</body>
+</html>
